@@ -321,7 +321,7 @@ with gr.Blocks() as chat:
                         metadata_list_view = gr.Textbox(label="Metadata")
         with gr.Row():
             with gr.Column():
-                with gr.Accordion("How to use ResQChat?", open=False):
+                with gr.Accordion("How to use Chat?", open=False):
                     gr.Markdown(
                         """
                         Examples:
