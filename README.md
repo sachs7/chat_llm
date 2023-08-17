@@ -1,6 +1,6 @@
 # Chat with your own data!
 
-An app that let's you chat with your documents (PDFs); the app is makes use of the OpenAI LLM using LangChain as the framework.
+An app that lets you chat with your documents (PDFs); the app makes use of the OpenAI LLM using LangChain as the framework.
 
 ```
 .
