@@ -1,0 +1,9 @@
+openai
+llama_index
+pypdf
+gradio
+langchain
+panel
+python-dotenv
+chromadb
+loguru
