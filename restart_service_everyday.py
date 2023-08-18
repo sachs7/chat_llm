@@ -9,6 +9,8 @@ from loguru import logger
 
 
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+logger.remove(0)  # To not show the logs in the console
 logger.add(f"logs/logs_{timestamp}.log", rotation="23:59", compression="zip")
 
 process = None  # Global variable to track the subprocess

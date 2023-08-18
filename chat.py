@@ -26,6 +26,8 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 os.environ["OPENAI_API_KEY"] = OPENAI_API_KEY
 
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+logger.remove(0)  # To not show the logs in the console
 logger.add(f"logs/logs_{timestamp}.log", rotation="23:59", compression="zip")
 
 """
@@ -259,7 +261,7 @@ def append_to_log(username, input_text, response, metadata_list):
 
 
 def new_rating_append(username, new_rating):
-    print(new_rating)
+    logger.info(new_rating)
     with open(f"logs/{username}_log.txt", "a") as file:
         file.write(f"\nRating: {new_rating}\n")
         file.write(f"\nTimestamp: {timestamp}\n")
